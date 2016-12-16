@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="transtat" thread-count="1">
+
+    <test name ="trans" >
+        <parameter name="browserName" value="${browserName}" />
+        <classes>
+          <!--  <class name=""/>-->
+
+        </classes>
+    </test>
+
+</suite>
