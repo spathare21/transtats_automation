@@ -19,11 +19,16 @@ public class Locators {
         className, xpath, id, LINK, CSS, NAME,TagName
     }
 
-    public Locators(String fileName) throws IOException
+    public Locators(String fileName)
     {
-        this.RepositoryFile = fileName;
-        stream = new FileInputStream(RepositoryFile);
-        propertyFile.load(stream);
+        try {
+            this.RepositoryFile = fileName;
+            stream = new FileInputStream(RepositoryFile);
+            propertyFile.load(stream);
+        }
+        catch (IOException io){
+            io.printStackTrace();
+        }
     }
 
     public By getbjectLocator(String locatorName)
