@@ -12,7 +12,7 @@ public class BaseClass {
 
 
     @BeforeTest
-    public void beforeTest(){
+    public void beforeTest() throws Exception {
 
         UiControl.getBrowser("firefox");
         UiControl.setUrl();

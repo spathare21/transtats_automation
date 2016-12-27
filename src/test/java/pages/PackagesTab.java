@@ -8,6 +8,8 @@ import utilities.Utils;
 import java.util.ArrayList;
 import java.util.List;
 
+import static utilities.Utils.*;
+
 /**
  * Created by spathare on 12/27/16.
  */
@@ -15,12 +17,13 @@ public class PackagesTab {
 
 
     public static void addPackageButton() throws InterruptedException {
-        Utils.clickOn("addpackages");
+        clickOn("addpackages");
+        waitForElement("packagename",60);
         Thread.sleep(2000);
     }
 
     public static void backToPackagesList() throws InterruptedException {
-        Utils.clickOn("backtopkglist");
+        clickOn("backtopkglist");
         Thread.sleep(2000);
     }
 

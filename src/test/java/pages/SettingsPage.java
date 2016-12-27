@@ -3,38 +3,43 @@ package pages;
 
 import utilities.Utils;
 
+import static utilities.Utils.*;
+
 /**
  * Created by spathare on 12/20/16.
  */
 public class SettingsPage {
 
-    public static void settings(){
-        Utils.clickOn("settings");
+    public static void settings() throws InterruptedException {
+        clickOn("settings");
+        waitForElement("summary",60);
+        Thread.sleep(2000);
     }
 
 
     public static void summaryTab() throws InterruptedException {
-        Utils.clickOn("summary");
+        clickOn("summary");
         Thread.sleep(2000);
     }
 
     public static void packageTab() throws InterruptedException {
-        Utils.clickOn("packages");
+        clickOn("packages");
+        waitForElement("addpackages",60);
         Thread.sleep(2000);
     }
 
     public static void releaseStreamTab() throws InterruptedException {
-        Utils.clickOn("relstream");
+        clickOn("relstream");
         Thread.sleep(2000);
     }
 
     public static void languagesTab() throws InterruptedException {
-        Utils.clickOn("languages");
+        clickOn("languages");
         Thread.sleep(2000);
     }
 
     public static void transPlatformTab() throws InterruptedException {
-        Utils.clickOn("transplatform");
+        clickOn("transplatform");
         Thread.sleep(2000);
     }
 
@@ -44,18 +49,18 @@ public class SettingsPage {
     }
 
     public static void graphRuleTab() throws InterruptedException {
-        Utils.clickOn("graphrule");
+        clickOn("graphrule");
         Thread.sleep(2000);
     }
 
     public static void notificationTab() throws InterruptedException {
 
-        Utils.clickOn("notification");
+        clickOn("notification");
         Thread.sleep(2000);
     }
 
     public static void logsTab() throws InterruptedException {
-        Utils.clickOn("logs");
+        clickOn("logs");
         Thread.sleep(2000);
     }
 
