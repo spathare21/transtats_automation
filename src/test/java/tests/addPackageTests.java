@@ -1,7 +1,7 @@
 package tests;
 
 import org.testng.annotations.Test;
-import static pages.Packages.*;
+
 import static utilities.Utils.clickOn;
 
 import utilities.BaseClass;
