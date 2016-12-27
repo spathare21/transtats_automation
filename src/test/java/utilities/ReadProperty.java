@@ -1,7 +1,6 @@
 package utilities;
 
-import java.io.File;
-import java.io.FileInputStream;
+import java.io.*;
 import java.util.*;
 
 /**
@@ -9,12 +8,16 @@ import java.util.*;
  */
 public class ReadProperty {
 
+    public static String packageFilePath = "src/test/resources/packages.properties";
+    public static String configFilePath = "src/test/resources/transtatsconfig.properties";
+
+
     public static List<String> getPackages(){
         Properties properties;
         List <String> packages = new ArrayList<String>();
         try {
             properties=new Properties();
-            properties.load(new FileInputStream(new File("src/test/resources/packages.properties")));
+            properties.load(new FileInputStream(new File(packageFilePath)));
             for ( String pkg : properties.getProperty("packages").split(",")){
                 packages.add(pkg);
             }
@@ -23,6 +26,15 @@ public class ReadProperty {
             e.printStackTrace();
         }
         return packages;
+    }
+
+    public static String getConfig(String key) throws IOException {
+
+        Properties prop=new Properties();
+        InputStream file=new FileInputStream(configFilePath);
+        prop.load(file);
+        String pairValue=prop.getProperty(key);
+        return pairValue;
     }
 
    public static void main(String args[]){
