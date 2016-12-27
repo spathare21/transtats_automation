@@ -49,9 +49,11 @@ public class UiControl {
 
     }
 
-    public static void setUrl(){
-        String appUrl = "http://transtats.devlab.redhat.com/settings/packages";
-        UiControl.getWebDriver().get(appUrl);
+    public static void setUrl() throws Exception{
+
+        String applicationUrl = ReadProperty.getConfig("production");
+        UiControl.getWebDriver().get(applicationUrl);
+
     }
 
     public static void maxBrowser(){

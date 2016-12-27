@@ -33,8 +33,8 @@ public class ReadProperty {
         Properties prop=new Properties();
         InputStream file=new FileInputStream(configFilePath);
         prop.load(file);
-        String pairValue=prop.getProperty(key);
-        return pairValue;
+        String Value=prop.getProperty(key);
+        return Value;
     }
 
    public static void main(String args[]){

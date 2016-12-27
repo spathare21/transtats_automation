@@ -2,8 +2,7 @@ package tests;
 
 import org.testng.annotations.Test;
 
-import static utilities.Utils.clickOn;
-
+import static pages.PackagesTab.*;
 import utilities.BaseClass;
 
 /**
@@ -12,9 +11,11 @@ import utilities.BaseClass;
 public class addPackageTests extends BaseClass{
 
     @Test
-    public void packagetest(){
+    public void packagetest()throws Exception {
         System.out.println("in package test");
-        clickOn("addpackages");
+        addPackageButton();
+        addPackage();
+
     }
 
 }
