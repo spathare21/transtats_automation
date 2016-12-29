@@ -30,6 +30,7 @@ public class SettingsPage {
 
     public static void releaseStreamTab() throws InterruptedException {
         clickOn("relstream");
+        waitForElement("addreleasestream",60);
         Thread.sleep(2000);
     }
 

@@ -10,7 +10,7 @@ import static pages.SettingsPage.*;
 /**
  * Created by spathare on 12/29/16.
  */
-public class addGraphRule extends BaseClass{
+public class addGraphRuleTest extends BaseClass{
 
     @Test
     public void graphruletest() throws InterruptedException {
