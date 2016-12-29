@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import java.util.List;
+
 /**
  * Created by spathare on 12/27/16.
  */
@@ -29,6 +31,19 @@ public class UiControl {
         return webElement;
 
     }
+
+    public static List<WebElement> getWebElements(String locatorName){
+
+        List<WebElement> webElements = null;
+
+        locators = new Locators("./src/test/resources/locators.properties");
+
+        webElements = UiControl.getWebDriver().findElements(locators.getbjectLocator(locatorName));
+
+        return webElements;
+
+    }
+
 
     public static WebDriver getBrowser(String browserName){
 

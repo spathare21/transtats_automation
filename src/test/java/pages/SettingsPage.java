@@ -25,7 +25,7 @@ public class SettingsPage {
     public static void packageTab() throws InterruptedException {
         clickOn("packages");
         waitForElement("addpackages",60);
-        Thread.sleep(2000);
+        Thread.sleep(3000);
     }
 
     public static void releaseStreamTab() throws InterruptedException {
@@ -50,6 +50,7 @@ public class SettingsPage {
 
     public static void graphRuleTab() throws InterruptedException {
         clickOn("graphrule");
+        waitForElement("addgraphrule",60);
         Thread.sleep(2000);
     }
 

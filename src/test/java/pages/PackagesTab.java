@@ -19,11 +19,12 @@ public class PackagesTab {
     public static void addPackageButton() throws InterruptedException {
         clickOn("addpackages");
         waitForElement("packagename",60);
-        Thread.sleep(2000);
+        Thread.sleep(5000);
     }
 
     public static void backToPackagesList() throws InterruptedException {
         clickOn("backtopkglist");
+        waitForElement("addpackages",60);
         Thread.sleep(2000);
     }
 
@@ -70,8 +71,8 @@ public class PackagesTab {
         List packagelist = UiControl.getWebDriver().findElements(By.xpath(".//*[@id='packages-table']/tbody/tr"));
         System.out.println("Number of packages in Package List are : " + packagelist.size());
 
-        for(int i = 0; i < packagelist.size();i++){
-           packages.add(UiControl.getWebDriver().findElement(By.xpath(".//*[@id='packages-table']/tbody/tr["+ i +"]/td["+ i+ "]")).getText());
+        for(int i = 1; i <= packagelist.size();i++){
+           packages.add(UiControl.getWebDriver().findElement(By.xpath(".//*[@id='packages-table']/tbody/tr["+ i +"]/td[1]")).getText());
         }
 
      return packages;
@@ -82,9 +83,9 @@ public class PackagesTab {
         String pkgname;
         List packagelist = UiControl.getWebDriver().findElements(By.xpath(".//*[@id='packages-table']/tbody/tr"));
 
-        for(int i = 0; i < packagelist.size();i++){
+        for(int i = 1; i <= packagelist.size();i++){
             pkgname = "";
-            pkgname = UiControl.getWebDriver().findElement(By.xpath(".//*[@id='packages-table']/tbody/tr["+ i +"]/td["+ i+ "]")).getText();
+            pkgname = UiControl.getWebDriver().findElement(By.xpath(".//*[@id='packages-table']/tbody/tr["+ i +"]/td[1]")).getText();
             if(pkgname.equalsIgnoreCase(packageName)){
                 UiControl.getWebDriver().findElement(By.xpath(".//*[@id='packages-table']/tbody/tr["+ i +"]//span[contains(@class,'glyphicon-pencil')]")).click();
             }
@@ -96,8 +97,8 @@ public class PackagesTab {
 
         List packagelist = UiControl.getWebDriver().findElements(By.xpath(".//*[@id='packages-table']/tbody/tr"));
 
-        for(int i = 0; i < packagelist.size();i++) {
-          if(UiControl.getWebDriver().findElement(By.xpath(".//*[@id='packages-table']/tbody/tr["+ i +"]/td["+ i+ "]")).getText().equalsIgnoreCase(packageName)) {
+        for(int i = 1; i <= packagelist.size();i++) {
+          if(UiControl.getWebDriver().findElement(By.xpath(".//*[@id='packages-table']/tbody/tr["+ i +"]/td[1]")).getText().equalsIgnoreCase(packageName)) {
               UiControl.getWebDriver().findElement(By.xpath(".//*[@id='packages-table']/tbody/tr[" + i + "]//span[contains(@class,'glyphicon-trash')]")).click();
           }
         }
