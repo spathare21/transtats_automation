@@ -37,7 +37,7 @@ public class HomePage {
         Select selectpkg = new Select(UiControl.getWebElement("packagedropdown"));
         //selectpkg.selectByVisibleText();
         selectpkg.selectByIndex(1);
-        Thread.sleep(2000);
+        Thread.sleep(5000);
     }
 
     public static void viewBasedOnGraphRule() throws Exception {
@@ -58,6 +58,7 @@ public class HomePage {
             System.out.println(legends.get(i).getText());
         }
 
+        Thread.sleep(5000);
     }
 
 
