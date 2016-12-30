@@ -40,6 +40,15 @@ public class HomePage {
         Thread.sleep(5000);
     }
 
+    public static void selectRule() throws Exception {
+        Select selectrule = new Select(UiControl.getWebElement("rulenamedd"));
+        //selectrule.selectByVisibleText();
+        selectrule.selectByIndex(1);
+        Thread.sleep(5000);
+    }
+
+
+
     public static void viewBasedOnGraphRule() throws Exception {
         clickOn("basedongraphrule");
         Thread.sleep(2000);
@@ -54,7 +63,8 @@ public class HomePage {
     public static void getStats() throws Exception {
 
         List<WebElement> legends = UiControl.getWebElements("legends");
-        for(int i=1 ; i<=legends.size();i++){
+        System.out.println("Number of lagends/branches for the selected package are :" + legends.size());
+        for(int i=0 ; i<legends.size();i++){
             System.out.println(legends.get(i).getText());
         }
 

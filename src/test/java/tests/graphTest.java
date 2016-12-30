@@ -1,12 +1,14 @@
 package tests;
 
 import org.testng.annotations.Test;
+import utilities.BaseClass;
+
 import static pages.HomePage.*;
 
 /**
  * Created by spathare on 12/30/16.
  */
-public class graphTest {
+public class graphTest extends BaseClass {
 
     @Test
     public void graphtest1() throws Exception {
@@ -17,7 +19,7 @@ public class graphTest {
         getStats();
 
         viewBasedOnGraphRule();
-        selectPackage();
+        selectRule();
         getStats();
 
     }
