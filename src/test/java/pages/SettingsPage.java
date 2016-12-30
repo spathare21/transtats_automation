@@ -22,6 +22,12 @@ public class SettingsPage {
         Thread.sleep(2000);
     }
 
+    public static void graphPage() throws Exception {
+        clickOn("graphhome");
+        waitForElement("graphtab",60);
+        Thread.sleep(2000);
+    }
+
     public static void packageTab() throws InterruptedException {
         clickOn("packages");
         waitForElement("addpackages",60);
