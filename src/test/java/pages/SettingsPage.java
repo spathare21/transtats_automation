@@ -42,6 +42,7 @@ public class SettingsPage {
 
     public static void languagesTab() throws InterruptedException {
         clickOn("languages");
+        waitForElement("addlang",60);
         Thread.sleep(2000);
     }
 
