@@ -1,11 +1,20 @@
 package pages;
 
 import static utilities.UiControl.*;
+import static utilities.Utils.*;
 
 /**
  * Created by spathare on 12/30/16.
  */
 public class SignUpPage {
+
+
+    public static void clickOnSignUp() throws Exception {
+        clickOn("signup");
+        waitForElement("username",60);
+        Thread.sleep(2000);
+
+    }
 
     public static void signUp() throws Exception {
 
