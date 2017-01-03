@@ -2,8 +2,6 @@
 <suite name="transtat" thread-count="1">
 
     <test name ="trans" >
-       <!-- <parameter name="browserName" value="${browserName}" />
-        <parameter name="environment" value="${environment}" />-->
         <classes>
             <class name="tests.addGraphRuleTest"/>
             <class name="tests.addPackageTests"/>

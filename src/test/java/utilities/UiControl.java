@@ -63,9 +63,9 @@ public class UiControl {
 
     }
 
-    public static void setUrl() throws Exception{
+    public static void setUrl(String env) throws Exception{
 
-        String applicationUrl = ReadProperty.getConfig("production");
+        String applicationUrl = ReadProperty.getConfig(env);
         UiControl.getWebDriver().get(applicationUrl);
 
     }

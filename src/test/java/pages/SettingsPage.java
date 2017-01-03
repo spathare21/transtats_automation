@@ -58,7 +58,7 @@ public class SettingsPage {
 
     public static void graphRuleTab() throws InterruptedException {
         clickOn("graphrule");
-        waitForElement("addgraphrule",60);
+        waitForElement("addgraphrule",90);
         Thread.sleep(2000);
     }
 
