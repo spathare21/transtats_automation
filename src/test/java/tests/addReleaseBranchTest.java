@@ -12,7 +12,7 @@ public class addReleaseBranchTest extends BaseClass {
 
     @Test
     public void addBranchTest() throws Exception {
-
+        config();
         settings();
         releaseStreamTab();
         selectReleaseStream("rhel");

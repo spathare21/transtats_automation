@@ -10,6 +10,12 @@ import static utilities.Utils.*;
  */
 public class SettingsPage {
 
+    public static void config() throws Exception {
+        clickOn("config");
+        waitForElement("settings",60);
+        Thread.sleep(2000);
+    }
+
     public static void settings() throws InterruptedException {
         clickOn("settings");
         waitForElement("summary",60);

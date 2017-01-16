@@ -13,8 +13,9 @@ import static pages.SettingsPage.*;
 public class addGraphRuleTest extends BaseClass{
 
     @Test
-    public void graphruletest() throws InterruptedException {
+    public void graphruletest() throws Exception {
         System.out.println("Adding graph rule");
+        config();
         settings();
         graphRuleTab();
         addGraphRuleButton();

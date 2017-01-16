@@ -9,18 +9,13 @@ import utilities.Utils;
  */
 public class LoginPage {
 
-    public static void loginButton() throws Exception{
-        Utils.clickOn("login");
-        Thread.sleep(2000);
-    }
-
-    public static void loginToTranstats() throws InterruptedException {
+      public static void loginToTranstats() throws InterruptedException {
       WebElement email = UiControl.getWebElement("email");
-      email.sendKeys("email_id");
+      email.sendKeys("admin");
       Thread.sleep(1000);
 
       WebElement password = UiControl.getWebElement("pwd");
-      password.sendKeys("abcd");
+      password.sendKeys("admin123");
       Thread.sleep(1000);
 
       Utils.clickOn("signin");

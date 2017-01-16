@@ -1,5 +1,6 @@
 package utilities;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -70,9 +71,18 @@ public class UiControl {
 
     }
 
+    public static String getUrl(){
+        return getWebDriver().getCurrentUrl();
+    }
+
+
     public static void maxBrowser(){
         UiControl.getWebDriver().manage().window().maximize();
     }
 
+
+    public JavascriptExecutor getExecutor() {
+        return (JavascriptExecutor) getWebDriver();
+    }
 
 }
