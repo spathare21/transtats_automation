@@ -14,11 +14,10 @@ public class graphTest extends BaseClass {
     public void graphtest1() throws Exception {
         homePage();
         graphs();
-        viewPackageWise();
         selectPackage();
         getStats();
 
-        viewBasedOnGraphRule();
+        coverage();
         selectRule();
         getStats();
 

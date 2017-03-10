@@ -17,6 +17,7 @@ public class PackagesTab {
 
 
     public static void addPackageButton() throws InterruptedException {
+        waitForElement("addpackages",60);
         clickOn("addpackages");
         waitForElement("packagename",60);
         Thread.sleep(5000);
@@ -43,10 +44,6 @@ public class PackagesTab {
 
         if(!UiControl.getWebElement("rhelrelstream").isSelected()){
             UiControl.getWebElement("rhelrelstream").click();
-        }
-
-        if(!UiControl.getWebElement("langsetdefault").isSelected()){
-            UiControl.getWebElement("langsetdefault").click();
         }
 
         if(!UiControl.getWebElement("updatetransstats").isSelected()){

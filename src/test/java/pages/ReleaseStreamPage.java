@@ -10,6 +10,12 @@ import static utilities.Utils.*;
  */
 public class ReleaseStreamPage {
 
+
+  public static void manageRelStream() throws Exception {
+      clickOn("managerelstream");
+      Thread.sleep(2000);
+  }
+
   public static void addReleaseStream() throws Exception {
       clickOn("addreleasestream");
       Thread.sleep(5000);

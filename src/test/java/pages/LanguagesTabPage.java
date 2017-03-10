@@ -1,5 +1,9 @@
 package pages;
 
+import utilities.UiControl;
+import utilities.Utils;
+
+import static pages.SettingsPage.*;
 import static utilities.Utils.*;
 
 /**
@@ -13,7 +17,17 @@ public class LanguagesTabPage {
         Thread.sleep(2000);
     }
 
+    public static void manageLanguage() throws Exception {
+        settings();
+        languagesTab();
+        waitForElement("managelang",60);
+        clickOn("managelang");
+    }
+
     public static void addLanguage() throws Exception {
+        if(Utils.isElementPresent(UiControl.getWebDriver(),"addlang")){
+            clickOn("addlang");
+        }
 
     }
 

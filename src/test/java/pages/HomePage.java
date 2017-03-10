@@ -7,6 +7,8 @@ import utilities.UiControl;
 
 import java.util.List;
 
+import static pages.SettingsPage.languagesTab;
+import static pages.SettingsPage.settings;
 import static utilities.Utils.*;
 
 /**
@@ -17,18 +19,18 @@ public class HomePage {
     public static void homePage() throws Exception {
 
         clickOn("homepage");
-        waitForElement("graphtab",60);
+        waitForElement("trans_pos",60);
         Thread.sleep(2000);
     }
 
     public static void graphs() throws Exception {
-        clickOn("graphtab");
+        clickOn("trans_pos");
         Thread.sleep(2000);
 
     }
 
-    public static void comparison() throws Exception{
-        clickOn("comparetab");
+    public static void coverage() throws Exception{
+        clickOn("trans_coverage");
         Thread.sleep(2000);
     }
 
@@ -48,18 +50,6 @@ public class HomePage {
     }
 
 
-
-    public static void viewBasedOnGraphRule() throws Exception {
-        clickOn("basedongraphrule");
-        Thread.sleep(2000);
-    }
-
-    public static void viewPackageWise() throws Exception{
-        clickOn("packagewise");
-        Thread.sleep(2000);
-    }
-
-
     public static void getStats() throws Exception {
 
         List<WebElement> legends = UiControl.getWebElements("legends");
@@ -69,6 +59,12 @@ public class HomePage {
         }
 
         Thread.sleep(5000);
+    }
+
+    public static void adminPage() throws Exception {
+          settings();
+          languagesTab();
+
     }
 
 

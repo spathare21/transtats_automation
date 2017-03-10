@@ -75,15 +75,15 @@ public class GraphRuleTab {
 
         UiControl.getWebElement("rulename").sendKeys(" ");
 
+        Select select = new Select(UiControl.getWebElement("rulereleasebranch"));
+        select.selectByIndex(0);
+        Thread.sleep(2000);
+
         List<WebElement> rulePackages = UiControl.getWebElements("rulepackages");
         rulePackages.get(0).click();
 
         List<WebElement> ruleLanguages = UiControl.getWebElements("rulelanguages");
         ruleLanguages.get(1).click();
-
-        Select select = new Select(UiControl.getWebElement("rulereleasebranch"));
-        select.selectByIndex(0);
-        Thread.sleep(2000);
 
         clickOn("submitgraphrule");
         Thread.sleep(2000);
