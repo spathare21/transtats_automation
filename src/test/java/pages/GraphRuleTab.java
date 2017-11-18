@@ -17,7 +17,7 @@ import static utilities.Utils.*;
 public class GraphRuleTab {
 
     public static void addGraphRuleButton() throws InterruptedException {
-        Thread.sleep(5000);
+        waitForElement("addgraphrule",60);
         clickOn("addgraphrule");
         waitForElement("rulename",60);
         Thread.sleep(5000);

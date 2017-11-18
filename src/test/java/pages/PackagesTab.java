@@ -20,45 +20,38 @@ public class PackagesTab {
         waitForElement("addpackages",60);
         clickOn("addpackages");
         waitForElement("packagename",60);
-        Thread.sleep(5000);
     }
 
     public static void backToPackagesList() throws InterruptedException {
         clickOn("backtopkglist");
         waitForElement("addpackages",60);
-        Thread.sleep(2000);
     }
 
     public static void addPackage() throws InterruptedException {
 
+        addPackageButton();
+
         UiControl.getWebElement("packagename").sendKeys("demo");
-        Thread.sleep(1000);
 
         UiControl.getWebElement("upstream_url").sendKeys("http://demo.com");
-        Thread.sleep(1000);
 
         Select select = new Select(UiControl.getWebElement("translationplatform"));
         select.selectByIndex(1);
-        Thread.sleep(2000);
 
 
         if(!UiControl.getWebElement("rhelrelstream").isSelected()){
             UiControl.getWebElement("rhelrelstream").click();
         }
 
-        if(!UiControl.getWebElement("updatetransstats").isSelected()){
-            UiControl.getWebElement("updatetransstats").click();
+        if(!UiControl.getWebElement("updatestats").isSelected()){
+            UiControl.getWebElement("updatestats").click();
         }
 
-        Thread.sleep(2000);
         Utils.clickOn("addpackage");
-        Thread.sleep(2000);
-
     }
 
     public static void resetPackagefield() throws InterruptedException {
         Utils.clickOn("reset");
-        Thread.sleep(2000);
     }
 
     public static List<String> getPackageList(){
@@ -76,7 +69,7 @@ public class PackagesTab {
 
     }
 
-    public static void editPackage(String packageName){
+    public static void PackageDetails(String packageName){
         String pkgname;
         List packagelist = UiControl.getWebDriver().findElements(By.xpath(".//*[@id='packages-table']/tbody/tr"));
 
@@ -84,26 +77,11 @@ public class PackagesTab {
             pkgname = "";
             pkgname = UiControl.getWebDriver().findElement(By.xpath(".//*[@id='packages-table']/tbody/tr["+ i +"]/td[1]")).getText();
             if(pkgname.equalsIgnoreCase(packageName)){
-                UiControl.getWebDriver().findElement(By.xpath(".//*[@id='packages-table']/tbody/tr["+ i +"]//span[contains(@class,'glyphicon-pencil')]")).click();
+                UiControl.getWebDriver().findElement(By.xpath(".//*[@id='packages-table']/tbody/tr["+ i +"]/td[1]")).click();
             }
         }
 
     }
-
-    public static void deletePackage(String packageName){
-
-        List packagelist = UiControl.getWebDriver().findElements(By.xpath(".//*[@id='packages-table']/tbody/tr"));
-
-        for(int i = 1; i <= packagelist.size();i++) {
-          if(UiControl.getWebDriver().findElement(By.xpath(".//*[@id='packages-table']/tbody/tr["+ i +"]/td[1]")).getText().equalsIgnoreCase(packageName)) {
-              UiControl.getWebDriver().findElement(By.xpath(".//*[@id='packages-table']/tbody/tr[" + i + "]//span[contains(@class,'glyphicon-trash')]")).click();
-          }
-        }
-
-    }
-
-
-
 
 
 }

@@ -13,36 +13,33 @@ public class LanguagesTabPage {
 
     public static void addLangButton() throws Exception {
         clickOn("addlang");
-        waitForElement("languages",60);
+        waitForElement("locale_id",60);
         Thread.sleep(2000);
     }
 
-    public static void manageLanguage() throws Exception {
+    public static void EditLanguage() throws Exception {
         settings();
         languagesTab();
-        waitForElement("managelang",60);
-        clickOn("managelang");
+        waitForElement("editlang",60);
+        clickOn("editlang");
     }
 
     public static void addLanguage() throws Exception {
-        if(Utils.isElementPresent(UiControl.getWebDriver(),"addlang")){
-            clickOn("addlang");
-        }
+        UiControl.getWebElement("locale_id").sendKeys();
+
+        UiControl.getWebElement("lang_name").sendKeys();
+
+        UiControl.getWebElement("locale_alias").sendKeys();
+
+        UiControl.getWebElement("enable").click();
+
+        UiControl.getWebElement("save_lang").click();
 
     }
 
     public static void getAllLang() throws Exception {
 
     }
-
-    public static void addAlias() throws Exception {
-
-    }
-
-    public static void onOffLang() throws Exception {
-
-    }
-
 
 
 }

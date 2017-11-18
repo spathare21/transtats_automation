@@ -10,74 +10,35 @@ import static utilities.Utils.*;
  */
 public class SettingsPage {
 
-    public static void config() throws Exception {
-        clickOn("config");
-        waitForElement("settings",60);
-        Thread.sleep(2000);
-    }
 
     public static void settings() throws InterruptedException {
         clickOn("settings");
-        waitForElement("summary",60);
-        Thread.sleep(2000);
+        waitForElement("addlang",60);
     }
 
-
-    public static void summaryTab() throws InterruptedException {
-        clickOn("summary");
-        Thread.sleep(2000);
-    }
-
-    public static void graphPage() throws Exception {
+    public static void statsPage() throws Exception {
         clickOn("graphhome");
-        waitForElement("graphtab",60);
-        Thread.sleep(2000);
+        waitForElement("translation_status",60);
     }
 
     public static void packageTab() throws InterruptedException {
         clickOn("packages");
         waitForElement("addpackages",60);
-        Thread.sleep(3000);
     }
 
-    public static void releaseStreamTab() throws InterruptedException {
-        clickOn("relstream");
-        waitForElement("addreleasestream",60);
-        Thread.sleep(2000);
+    public static void productsTab() throws InterruptedException {
+        clickOn("products");
+        waitForElement("addProduct",60);
     }
 
     public static void languagesTab() throws InterruptedException {
         clickOn("languages");
         waitForElement("addlang",60);
-        Thread.sleep(2000);
     }
 
     public static void transPlatformTab() throws InterruptedException {
         clickOn("transplatform");
-        Thread.sleep(2000);
+        waitForElement("addTPinstance",60);
     }
-
-    public static void jobsTab() throws InterruptedException {
-        Utils.clickOn("jobs");
-        Thread.sleep(2000);
-    }
-
-    public static void graphRuleTab() throws InterruptedException {
-        clickOn("graphrule");
-        waitForElement("addgraphrule",90);
-        Thread.sleep(2000);
-    }
-
-    public static void notificationTab() throws InterruptedException {
-
-        clickOn("notification");
-        Thread.sleep(2000);
-    }
-
-    public static void logsTab() throws InterruptedException {
-        clickOn("logs");
-        Thread.sleep(2000);
-    }
-
 
 }

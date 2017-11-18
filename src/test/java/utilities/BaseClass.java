@@ -13,8 +13,8 @@ public class BaseClass {
     @BeforeTest
     public void beforeTest() throws Exception {
 
-        browser = Utils.readPropertyOrEnv("browser","firefox");
-        env = Utils.readPropertyOrEnv("env","prod");
+        browser = Utils.readPropertyOrEnv("browser","chrome");
+        env = Utils.readPropertyOrEnv("env","qa");
         UiControl.getBrowser(browser);
         UiControl.setUrl(env);
     }

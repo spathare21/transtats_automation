@@ -24,6 +24,15 @@ public class Utils {
 
     }
 
+    public static void waitForDisplay(WebElement element) {
+        for (int i = 0; i < 20; i++) {
+            if (element.isDisplayed()) {
+                System.out.println("element is displayed");
+                break;
+            }
+        }
+    }
+
     public static boolean isElementPresent(WebDriver driver,String elementName) {
         WebElement element;
         try {

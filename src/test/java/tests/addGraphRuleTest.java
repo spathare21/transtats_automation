@@ -15,9 +15,9 @@ public class addGraphRuleTest extends BaseClass{
     @Test
     public void graphruletest() throws Exception {
         System.out.println("Adding graph rule");
-        config();
+      //  config();
         settings();
-        graphRuleTab();
+      //  graphRuleTab();
         addGraphRuleButton();
         addGraphRule();
         backToGraphRuleList();

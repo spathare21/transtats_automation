@@ -2,7 +2,7 @@ package tests;
 
 import org.testng.annotations.Test;
 import utilities.BaseClass;
-import static pages.ReleaseStreamPage.*;
+import static pages.ProductPage.*;
 import static pages.SettingsPage.*;
 
 /**
@@ -12,12 +12,6 @@ public class addReleaseBranchTest extends BaseClass {
 
     @Test
     public void addBranchTest() throws Exception {
-        config();
-        settings();
-        releaseStreamTab();
-        selectReleaseStream("rhel");
-        addReleaseBranch();
-        backToRhelBranches();
 
     }
 

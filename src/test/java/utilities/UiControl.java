@@ -17,6 +17,7 @@ public class UiControl {
     private static WebDriver driver;
     private static Locators locators;
 
+
     public static WebDriver getWebDriver(){
         return driver;
     }
@@ -59,6 +60,7 @@ public class UiControl {
                 driver = new ChromeDriver();
                 break;
         }
+        driver.manage().window().maximize();
         return driver;
 
 
