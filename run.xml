@@ -3,10 +3,10 @@
 
     <test name ="trans" >
         <classes>
-            <class name="tests.addGraphRuleTest"/>
             <class name="tests.addPackageTests"/>
+          <!--  <class name="tests.addGraphRuleTest"/>
             <class name="tests.addReleaseBranchTest"/>
-            <class name="tests.graphTest"/>
+            <class name="tests.graphTest"/>-->
         </classes>
     </test>
 
