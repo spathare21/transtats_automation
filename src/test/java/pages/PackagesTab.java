@@ -27,13 +27,13 @@ public class PackagesTab {
         waitForElement("addpackages",60);
     }
 
-    public static void addPackage() throws InterruptedException {
+    public static void addPackage(String packageName, String upstreamUrl) throws InterruptedException {
 
         addPackageButton();
 
-        UiControl.getWebElement("packagename").sendKeys("demo");
+        UiControl.getWebElement("packagename").sendKeys(packageName);
 
-        UiControl.getWebElement("upstream_url").sendKeys("http://demo.com");
+        UiControl.getWebElement("upstream_url").sendKeys(upstreamUrl);
 
         Select select = new Select(UiControl.getWebElement("translationplatform"));
         select.selectByIndex(1);
@@ -48,6 +48,9 @@ public class PackagesTab {
         }
 
         Utils.clickOn("addpackage");
+    }
+    public static String getPackageAlertText(){
+        return UiControl.getWebElement("packageAddalert").getText();
     }
 
     public static void resetPackagefield() throws InterruptedException {
