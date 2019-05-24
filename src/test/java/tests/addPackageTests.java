@@ -2,9 +2,6 @@ package tests;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
-import static pages.LoginPage.login;
-import static pages.LoginPage.viewTranstats;
 import static pages.PackagesTab.*;
 import static pages.SettingsPage.*;
 import utilities.BaseClass;
@@ -41,6 +38,7 @@ public class addPackageTests extends BaseClass{
        Thread.sleep(2000);
        Assert.assertEquals(UiControl.getWebElement("packageNameError").getText(), "Not found at selected translation platform", "Package does not exist on translation platform");
        backToPackagesList();
+
     }
 
 }
